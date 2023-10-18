@@ -1,0 +1,35 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+<div id="track-info" class="track-info-wrap track-single" data-track-id="{{ page.page_ptr_id}}">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="track-img-wrap mx-auto">
+                {% image page.track_image width-400 as this_track_img %}
+                <img src="{{this_track_img.url}}" class="track-img" />
+            </div>
+            <h1 class="track-title text-center">{{ page.title }}</h1>
+            <p class="fs-4 track-artist text-center"><em>{{ page.artists.first.artist.name }}</em></p>
+            <div class="play-button-wrap text-center">
+                <button type="button" class="btn btn-primary track-button" data-track-id="{{ page.page_ptr_id}}" data-track-name="{{page.title}}" data-track-file="{{ page.audio_file.file.url }}"><i class="bi bi-play-btn"></i> Listen to Track</button>
+
+            </div>
+            <div class="track-text">
+                <p>{{ page.track_text|richtext }}</p>
+            </div>
+
+            <div class="track-genres">
+                <i class="bi bi-music-note-list"></i> Genre:
+                    {% for genre in page.audio_categories.all %}
+                    <span>{{ genre.track_category.name }}</span>
+                    {% endfor %}
+            </div>
+
+
+            <div class="track-tags" role="group" aria-label="Tags">
+                <i class="bi bi-tags-fill"></i> Tags:
+                    {% for tag in page.tags.all %}
+                    <span class="">{{tag}}</span>
+                    {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+{% load static wagtailcore_tags wagtailimages_tags %}
+
+<div>
+<!--    <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">-->
+<!--      <i class="bi pe-none" width="40" height="32"><use xlink:href="#bootstrap"></use></i>-->
+<!--      <span class="visually-hidden">Icon-only</span>-->
+<!--    </a>-->
+    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+      <li class="nav-item">
+        <a href="{% slugurl 'tracks' %}" class="nav-link active internal-url py-3 border-bottom rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="right" aria-label="Home" data-bs-title="Home">
+          <i class="bi bi-house-door"></i>
+        </a>
+      </li>
+<!--      <li>-->
+<!--        <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip"data-bs-trigger="hover" data-bs-placement="right" aria-label="Search" data-bs-original-title="Search">-->
+<!--          <i class="bi bi-search"></i>-->
+<!--        </a>-->
+<!--      </li>-->
+      <li>
+        <a href="{% slugurl 'tracks' %}" class="nav-link internal-url py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="right" aria-label="Tracks" data-bs-original-title="Tracks">
+          <i class="bi bi-file-music-fill"></i>
+        </a>
+      </li>
+      <li>
+        <a href="{% slugurl 'playlists' %}" class="nav-link py-3 border-bottom rounded-0 internal-url" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="right" aria-label="Playlists" data-bs-original-title="Playlists">
+          <i class="bi bi-list-task"></i>
+        </a>
+      </li>
+
+      <li>
+        <a href="http://127.0.0.1:8000/admin/pages/11/add_subpage/" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="right" aria-label="New Playlist" data-bs-original-title="New Playlist">
+          <i class="bi bi-plus-square"></i>
+        </a>
+      </li>
+    </ul>
+    <div class="dropdown border-top">
+      <a href="#" class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="{% static 'img/pfp-1.jpg' %}" alt="mdo" width="24" height="24" class="rounded-circle">
+      </a>
+      <ul class="dropdown-menu text-small shadow" style="">
+        <li><a class="dropdown-item" href="#">New project...</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
+    </div>
+  </div>

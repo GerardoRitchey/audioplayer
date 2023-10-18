@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div id="home" style="">
+    <div class="container">
+        <h1 id="page-title" class="text-break">Django/Wagtail/Bootstrap/Howler.js App</h1>
+        <h2>Next Iteration of DLBRadio</h2>
+        <p class="text-subtle">Currently Incomplete</p>
+        <p>This app was built as a server-side technical and learning exercise on Django and Wagtail.</p>
+
+        <p><em>UI/UX on this is/was an afterthought.</em></p>
+
+        <p>The decision to add Single Page Application functionality came much later, and is incredibly
+        evident in the JavaScript files and the mix-and-match grid/flex CSS.</p>
+
+
+        <p>This web app is built using the following:</p>
+        <ul>
+            <li>Django Web Framework</li>
+            <li>Wagtail CMS</li>
+            <li><a href="https://github.com/goldfire/howler.js">Howler.js</a></li>
+            <li>Bootstrap5</li>
+            <li>Demo Tracks by <a href="https://www.scottbuckley.com.au/">Scott Buckley</a> used under the Creative Commons 4 license By Scott Buckley</li>
+            <li>Demo Artwork generated using Midjourney AI</li>
+        </ul>
+
+        <p>The data serving and restful API to retrieve data from the models is complete.</p>
+        <p>The JavaScript that fetches the data on the otherhand... well it works, but it is not remotely close to clean</p>
+
+        <p>There will be another version of this project built with a specific intent from the beginning for it to be
+        a single page application, and Django/Wagtail will only serve as the server-side back end for the application.</p>
+
+
+    </div>
+</div>
+
+
+
+{% endblock content %}

@@ -1,0 +1,30 @@
+.track-single .track-img-wrap{
+    display: block;
+    max-width: 400px
+}
+
+.track-row .track-img-wrap,
+.playlist-row .track-img-wrap{
+    max-width: 100px;
+}
+
+.track-img-wrap .track-img{
+    width: 100%;
+    height: auto
+}
+
+
+#howler-player{
+    position: absolute;
+    height: 175px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+}
+
+#track-timeline {
+height: 30px;
+
+}
+

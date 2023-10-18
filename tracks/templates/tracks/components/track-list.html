@@ -1,0 +1,18 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+<div id="track-list" class="container">
+    {% for track in page.get_children.specific %}
+
+    <div class="row track-row">
+        <div class="track-img-wrap col-sm-3 col-xs-3">
+            {% image track.track_image width-100 as this_track_img %}
+            <img src="{{this_track_img.url}}" class="track-img" />
+        </div>
+        <div class="track-info-wrap col-sm-9 col-xs-9" data-track-id="{{track.page_ptr_id}}">
+            <h2 class="track-title"><a href="{% pageurl track %}" class="internal-url">{{ track.title }}</a></h2>
+            <p class="fs-5 track-artist">{{ track.artists.first.artist.name }}</p>
+        </div>
+    </div>
+{% endfor %}
+
+</div>

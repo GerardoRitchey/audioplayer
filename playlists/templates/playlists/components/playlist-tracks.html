@@ -1,0 +1,19 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+<div id="track-list" class="container">
+    <h1>{{ page.title }}</h1>
+    <button type="button" class="btn btn-primary playlist-button" data-playlist-id="{{page.page_ptr_id}}"><i class="bi bi-play-btn"></i> Play Playlist</button>
+
+
+    {% for block in page.body %}
+    <div class="row track-row">
+        <div class="col-xs-3 col-sm-3 track-img-wrap">
+           {% image block.value.page.track_image width-100 as this_track_img %}
+            <img src="{{this_track_img.url}}" class="track-img" />
+        </div>
+        <div class="col-xs-9 col-sm-9 track-info-wrap" data-track-id="{{ block.value.page.page_ptr_id }}">
+            <h2 class="track-title"><a href="{% pageurl block.value.page %}" class="internal-url">{{ block.value.page.title }}</a></h2>
+            <p class="fs-5 track-artist">{{ block.value.page.artists.first.artist.name }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>

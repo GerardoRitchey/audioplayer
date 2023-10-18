@@ -1,0 +1,14 @@
+/api/migrations/
+/home/migrations/
+/playlists/migrations/
+/Dockerfile
+/.dockerignore
+/media/media/500-ms-silence.mp3
+/tracks/migrations/0001_initial.py
+/tracks/migrations/0002_audioartist_audiocategory_audiotag_trackaudioartist.py
+/tracks/migrations/0003_audiotrack_album_audiotracktag_audiotrack_tags.py
+/tracks/migrations/0004_alter_audiotrack_album.py
+/tracks/migrations/0005_audiotrack_audio_file.py
+/tracks/migrations/0006_trackaudiocategory.py
+/tracks/migrations/0007_alter_trackaudiocategory_track.py
+/tracks/migrations/0008_trackindex.py

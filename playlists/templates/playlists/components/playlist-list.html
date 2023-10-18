@@ -1,0 +1,21 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+<div id="playlist-list" class="container">
+    {% for playlist in page.get_children.specific %}
+
+    <div class="row playlist-row">
+        <div class="col-xs-3 col-sm-3 track-img-wrap">
+            <button class="btn btn-primary playlist-button" data-playlist-id="10">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-circle-fill track-img" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                </svg>
+            </button>
+
+        </div>
+        <div class="col-xs-9 col-sm-9 track-info-wrap" data-track-id="{{track.page_ptr_id}}">
+            <h2 class="track-title"><a href="{% pageurl playlist %}" class="internal-url">{{ playlist.title }}</a></h2>
+        </div>
+    </div>
+{% endfor %}
+
+</div>
